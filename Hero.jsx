@@ -110,7 +110,7 @@ export default function Hero() {
             About Me
           </h2>
           <p style={{ margin: 0, textAlign: 'justify', fontSize: '1rem', color: theme.primaryText }}>
-            I am an engineering student specializing in mechatronics engineering, focused on synthesizing robust software control stacks with precise automated physical prototypes. By maintaining expertise across structural validation environments and object-oriented runtime engines, I optimize complete automation designs for cross-functional industry mandates.
+           I am a Mechatronics Engineering student passionate about robotics, automation, embedded systems, and full-stack development. I enjoy building practical engineering solutions that combine software and hardware technologies.
           </p>
         </section>
 
@@ -119,7 +119,7 @@ export default function Hero() {
           <h2 style={{ fontSize: '1.25rem', color: theme.primaryText, textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '18px', borderBottom: `1px solid ${theme.primaryText}`, paddingBottom: '6px' }}>
             Technical Capabilities
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
             {skillsCategories.map((cat, idx) => (
               <div key={idx} style={{ backgroundColor: theme.surface, padding: '22px', borderRadius: '6px' }}>
                 <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: theme.primaryText, marginTop: '0', marginBottom: '14px' }}>{cat.type}</h3>
