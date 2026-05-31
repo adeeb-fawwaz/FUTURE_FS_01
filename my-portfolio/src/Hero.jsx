@@ -7,7 +7,7 @@ export default function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [typed, setTyped] = useState("");
 
-  const roles = ["Mechatronics Engineer", "Robotics Developer", "Embedded Systems Designer", "Automation Enthusiast"];
+  const roles = ["Mechatronics Engineer", "Robotics Developer", "Software Engineer",];
   const roleIndex = useRef(0);
   const charIndex = useRef(0);
   const isDeleting = useRef(false);
@@ -74,8 +74,8 @@ export default function Hero() {
       category: "Robotics & Automation",
       icon: "🤖",
       items: [
-        { name: "ROS 2", level: 68 },
-        { name: "Embedded Firmware", level: 73 },
+        { name: "ROS 2", level: 70 },
+        { name: "Embedded Firmware", level: 65 },
         { name: "MATLAB", level: 60 },
         { name: "PLC Basics", level: 55 },
       ],
@@ -84,10 +84,10 @@ export default function Hero() {
       category: "Design & Modeling",
       icon: "📐",
       items: [
-        { name: "SolidWorks", level: 78 },
-        { name: "AutoCAD", level: 74 },
-        { name: "Digital Twin Simulation", level: 62 },
-        { name: "Circuit Design", level: 65 },
+        { name: "SolidWorks", level: 75 },
+        { name: "AutoCAD", level: 80 },
+        { name: "Digital Twin Simulation", level: 50 },
+        { name: "Circuit Design", level: 50 },
       ],
     },
   ];
@@ -101,7 +101,7 @@ export default function Hero() {
       description:
         "Engineered a secure access control framework using RFID authentication. Designed custom firmware to interface microcontrollers with hardware modules. Achieved 99.8% read accuracy across 200+ test cycles and reduced unauthorized-access response time by 40% vs manual systems.",
       stack: ["Embedded C", "Microcontrollers", "RFID Modules", "Hardware Architecture"],
-      github: "https://github.com/adeebfawwaz",
+      github: "https://github.com/adeeb-fawwaz",
       color: "#b87333",
     },
     {
@@ -112,7 +112,7 @@ export default function Hero() {
       description:
         "Modeled 6-DOF robotic arm path-planning sequences in ROS 2 and SolidWorks. Simulated production-line material handling paths and optimized process loops, achieving a 22% reduction in simulated cycle time through trajectory smoothing algorithms.",
       stack: ["ROS 2", "SolidWorks", "Automation Logic", "Python"],
-      github: "https://github.com/adeebfawwaz",
+      github: "https://github.com/adeeb-fawwaz",
       color: "#5c8a6e",
     },
   ];
@@ -518,14 +518,14 @@ export default function Hero() {
         <div className="hero-section">
           <div className="hero-inner">
             <div className="hero-text">
-              <p className="hero-eyebrow">Available for Internships · 2025</p>
+              <p className="hero-eyebrow">Available for Internships · 2026-27</p>
               <h1 className="hero-name">Adeeb<br />Fawwaz</h1>
               <p className="hero-role">
                 <span>{typed}</span>
                 <span className="cursor" />
               </p>
               <p className="hero-bio">
-                Mechatronics Engineering student at Chennai Institute of Technology (2023–2027), passionate about building intelligent systems that bridge software and hardware — from embedded firmware to robotic automation.
+                Mechatronics Engineering student at Sri Manakula Vinayagar Engineering College (2023–2027), passionate about building intelligent systems that bridge software and hardware — from embedded firmware to robotic automation.
               </p>
               <div className="hero-cta">
                 <a onClick={() => scrollTo("Projects")} className="cta-primary" style={{ cursor: "pointer" }}>
@@ -564,13 +564,13 @@ export default function Hero() {
               I believe great engineering isn't just technically correct — it's efficient, scalable, and human-centered. I bring that mindset to every project, from hardware prototyping to digital simulation.
             </p>
             <div className="social-row">
-              <a href="https://github.com/adeebfawwaz" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://github.com/adeeb-fawwaz" target="_blank" rel="noreferrer" className="social-link">
                 GitHub ↗
               </a>
-              <a href="https://linkedin.com/in/adeebfawwaz" target="_blank" rel="noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/in/adeeb-fawwaz-a0a4482a7/" target="_blank" rel="noreferrer" className="social-link">
                 LinkedIn ↗
               </a>
-              <a href="mailto:fawwazadeeb@gmail.com" className="social-link">
+              <a href="mailto:adeebny2005@gmail.com" className="social-link">
                 Email ↗
               </a>
             </div>
@@ -659,8 +659,8 @@ export default function Hero() {
         <h2 className="section-title">Education</h2>
         <div className="edu-card">
           <div>
-            <p className="edu-degree">Bachelor of Engineering — Mechatronics Engineering</p>
-            <p className="edu-inst">Chennai Institute of Technology</p>
+            <p className="edu-degree">Bachelor of Technology — Mechatronics Engineering</p>
+            <p className="edu-inst">Sri Manakula Vinayagar Engineering College</p>
             <p className="edu-highlight">
               Specialization in Industrial Automation, Robotics Kinematics, and Embedded Firmware Logic. Active participant in robotics clubs and IEEE student chapter.
             </p>
@@ -688,10 +688,10 @@ export default function Hero() {
         <div className="contact-grid">
           <div className="contact-info">
             {[
-              { icon: "📍", label: "Location", val: "19, Raja Street West, Chennai" },
-              { icon: "✉️", label: "Email", val: "fawwazadeeb@gmail.com" },
-              { icon: "🎓", label: "Institution", val: "Chennai Institute of Technology" },
-              { icon: "📅", label: "Available From", val: "Summer 2025 · Open to Internships" },
+              { icon: "📍", label: "Location", val: "19, Raja Street West,Neravy, Karaikal, Puducherry, India" },
+              { icon: "✉️", label: "Email", val: "adeebny2005@gmail.com" },
+              { icon: "🎓", label: "Institution", val: "Sri Manakula Vinayagar Engineering College" },
+              { icon: "📅", label: "Available From", val: "Summer 2026-27 · Open to Internships" },
             ].map((c) => (
               <div className="contact-item" key={c.label}>
                 <span className="contact-icon">{c.icon}</span>
@@ -711,7 +711,7 @@ export default function Hero() {
               className="form-submit"
               onClick={() => {
                 const subject = encodeURIComponent("Portfolio Inquiry");
-                window.location.href = `mailto:fawwazadeeb@gmail.com?subject=${subject}`;
+                window.location.href = `mailto:adeebny2005@gmail.com?subject=${subject}`;
               }}
             >
               Send Message →
@@ -723,7 +723,7 @@ export default function Hero() {
       <footer>
         <p style={{ marginBottom: 6 }}>
           <span style={{ fontFamily: "'DM Serif Display', serif", fontSize: "1.1rem" }}>Adeeb Fawwaz</span>
-          &nbsp;·&nbsp; Mechatronics Engineer &nbsp;·&nbsp; Chennai, India
+          &nbsp;·&nbsp; Mechatronics Engineer &nbsp;·&nbsp; Neravy, Karaikal, Puducherry, India
         </p>
         <p>© 2026 · Built with React · Open to opportunities</p>
       </footer>
