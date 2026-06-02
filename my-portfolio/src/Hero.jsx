@@ -229,7 +229,7 @@ export default function Hero() {
 
     .hero-inner {
       display: flex; justify-content: space-between; align-items: center;
-      width: 100%; gap: 40px; flex-wrap: wrap;
+      width: 100%; gap: 50px; flex-wrap: wrap;
     }
 
     .hero-text { flex: 1; min-width: 280px; }
@@ -267,18 +267,38 @@ export default function Hero() {
     }
     @keyframes blink { 50% { opacity: 0; } }
 
+    /* FIXED STYLES FOR FULL PORTRAIT IMAGE DISPLAY */
     .hero-avatar {
-      width: 220px; height: 220px; border-radius: 50%;
-      border: 3px solid ${theme.accent};
-      overflow: hidden; flex-shrink: 0;
-      background: ${theme.surface};
+      width: 260px; 
+      height: 340px; 
+      border-radius: 16px;
+      border: 1px solid ${theme.border};
+      overflow: hidden; 
+      flex-shrink: 0;
+      background: #ffffff;
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      position: relative;
+      animation: fadeUp 0.6s 0.3s both;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 0 0 8px ${theme.accentBg};
+    }
+    .hero-avatar img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: contain; 
+      background-color: #ffffff;
+      z-index: 2;
+    }
+    .hero-avatar-fallback {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
       display: flex; align-items: center; justify-content: center;
       font-family: 'DM Serif Display', serif;
       font-size: 3.5rem; color: ${theme.accent};
-      animation: fadeUp 0.6s 0.3s both;
-      box-shadow: 0 0 0 8px ${theme.accentBg};
+      background: ${theme.surface};
+      z-index: 1;
     }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
     .hero-bio {
       font-size: 1rem; color: ${theme.secondary}; max-width: 480px;
@@ -472,7 +492,7 @@ export default function Hero() {
       .hero-cta { justify-content: center; }
       .hero-bio { margin: 0 auto 28px; }
       .about-grid, .contact-grid { grid-template-columns: 1fr; }
-      .hero-avatar { width: 160px; height: 160px; font-size: 2.5rem; }
+      .hero-avatar { width: 200px; height: 260px; }
     }
   `;
 
@@ -536,8 +556,9 @@ export default function Hero() {
                 </a>
               </div>
             </div>
+            
+            {/* RESOLVED AVATAR FRAME: Renders the full image cleanly without circle cut-offs */}
             <div className="hero-avatar">
-              {/* UPDATED ASSET LINK: Referencing verbatim filename string matching your system */}
               <img
                 src="/photo.jpg..jpg"
                 alt="Adeeb Fawwaz"
@@ -545,7 +566,7 @@ export default function Hero() {
                   e.currentTarget.style.display = "none";
                 }}
               />
-              AF
+              <div className="hero-avatar-fallback">AF</div>
             </div>
           </div>
         </div>
