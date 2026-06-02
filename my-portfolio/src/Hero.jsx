@@ -494,7 +494,6 @@ export default function Hero() {
           <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "☀ Light" : "☾ Dark"}
           </button>
-          {/* FIXED LINK: Changed to root relative file structure */}
           <a href="/Adeeb_Fawwaz_Resume.pdf" download="Adeeb_Fawwaz_Resume.pdf" className="resume-btn">
             ↓ Resume
           </a>
@@ -538,9 +537,9 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-avatar">
-              {/* FIXED LINK: Pointing cleanly to your public folder photo asset */}
+              {/* UPDATED ASSET LINK: Referencing verbatim filename string matching your system */}
               <img
-                src="/photo.jpg"
+                src="/photo.jpg..jpg"
                 alt="Adeeb Fawwaz"
                 onError={(e) => {
                   e.currentTarget.style.display = "none";
