@@ -494,7 +494,7 @@ export default function Hero() {
           <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "☀ Light" : "☾ Dark"}
           </button>
-          <a href="/Adeeb_Fawwaz_Resume.pdf" download className="resume-btn">
+          <a href="/d:\Adeeb_Fawwaz_Resume.pdf" download className="resume-btn">
             ↓ Resume
           </a>
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -538,7 +538,7 @@ export default function Hero() {
             </div>
             <div className="hero-avatar">
               <img
-                src="/photo.jpg"
+                src="/d:\photo.jpg"
                 alt="Adeeb Fawwaz"
                 onError={(e) => {
                   e.target.style.display = "none";
