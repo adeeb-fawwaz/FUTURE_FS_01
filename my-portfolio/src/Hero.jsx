@@ -267,6 +267,19 @@ export default function Hero() {
     }
     @keyframes blink { 50% { opacity: 0; } }
 
+    .hero-avatar {
+      width: 220px; height: 220px; border-radius: 50%;
+      border: 3px solid ${theme.accent};
+      overflow: hidden; flex-shrink: 0;
+      background: ${theme.surface};
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 3.5rem; color: ${theme.accent};
+      animation: fadeUp 0.6s 0.3s both;
+      box-shadow: 0 0 0 8px ${theme.accentBg};
+    }
+    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
     .hero-bio {
       font-size: 1rem; color: ${theme.secondary}; max-width: 480px;
       margin-bottom: 36px; line-height: 1.75;
@@ -290,19 +303,6 @@ export default function Hero() {
       transition: border-color 0.2s, color 0.2s; text-decoration: none;
     }
     .cta-secondary:hover { border-color: ${theme.accent}; color: ${theme.accent}; }
-
-    .hero-avatar {
-      width: 220px; height: 220px; border-radius: 50%;
-      border: 3px solid ${theme.accent};
-      overflow: hidden; flex-shrink: 0;
-      background: ${theme.surface};
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'DM Serif Display', serif;
-      font-size: 3.5rem; color: ${theme.accent};
-      animation: fadeUp 0.6s 0.3s both;
-      box-shadow: 0 0 0 8px ${theme.accentBg};
-    }
-    .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
 
     .section-label {
       font-size: 0.75rem; font-weight: 600; letter-spacing: 2.5px;
@@ -494,7 +494,8 @@ export default function Hero() {
           <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "☀ Light" : "☾ Dark"}
           </button>
-          <a href="/d:\Adeeb_Fawwaz_Resume.pdf" download className="resume-btn">
+          {/* FIXED LINK: Changed to root relative file structure */}
+          <a href="/Adeeb_Fawwaz_Resume.pdf" download="Adeeb_Fawwaz_Resume.pdf" className="resume-btn">
             ↓ Resume
           </a>
           <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -537,11 +538,12 @@ export default function Hero() {
               </div>
             </div>
             <div className="hero-avatar">
+              {/* FIXED LINK: Pointing cleanly to your public folder photo asset */}
               <img
-                src="/d:\photo.jpg"
+                src="/photo.jpg"
                 alt="Adeeb Fawwaz"
                 onError={(e) => {
-                  e.target.style.display = "none";
+                  e.currentTarget.style.display = "none";
                 }}
               />
               AF
@@ -688,7 +690,7 @@ export default function Hero() {
         <div className="contact-grid">
           <div className="contact-info">
             {[
-              { icon: "📍", label: "Location", val: "19, Raja Street West,Neravy, Karaikal, Puducherry, India" },
+              { icon: "📍", label: "Location", val: "19, Raja Street West, Neravy, Karaikal, Puducherry, India" },
               { icon: "✉️", label: "Email", val: "adeebny2005@gmail.com" },
               { icon: "🎓", label: "Institution", val: "Sri Manakula Vinayagar Engineering College" },
               { icon: "📅", label: "Available From", val: "Summer 2026-27 · Open to Internships" },
